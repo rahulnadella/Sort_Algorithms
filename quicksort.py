@@ -3,12 +3,20 @@ class QuickSort(object):
     numbers = []
     number = 0
 
-    def exchange(self, i, j):
+    def sort(self, values):
+        if not values or len(values) == 0:
+            return;
+
+        QuickSort.numbers = values
+        QuickSort.number = len(values)
+        QuickSort().__quicksort__(0, QuickSort.number - 1)
+
+    def __exchange__(self, i, j):
         temp = QuickSort.numbers[i]
         QuickSort.numbers[i] = QuickSort.numbers[j]
         QuickSort.numbers[j] = temp
 
-    def quicksort(self, low, high):
+    def __quicksort__(self, low, high):
         i = int(low)
         j = int(high)
         pivot = QuickSort.numbers[low + int((high - low)/2)]
@@ -23,23 +31,13 @@ class QuickSort(object):
 
 
             if i <= j:
-                QuickSort().exchange(i, j)
+                QuickSort().__exchange__(i, j)
                 i += 1
                 j -= 1
 
 
         if low < j:
-            QuickSort().quicksort(low, j)
+            QuickSort().__quicksort__(low, j)
 
         if i < high:
-            QuickSort().quicksort(i, high)
-
-    def sort(self, values):
-        if not values or len(values) == 0:
-            return;
-
-        QuickSort.numbers = values
-        QuickSort.number = len(values)
-        QuickSort().quicksort(0, QuickSort.number - 1)
-
-QuickSort().sort([5, 3])
+            QuickSort().__quicksort__(i, high)
