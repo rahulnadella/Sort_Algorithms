@@ -1,7 +1,7 @@
 class QuickSort(object):
 
-    numbers = []
     number = 0
+    numbers = []
 
     def sort(self, values):
         if not values or len(values) == 0:
