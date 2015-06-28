@@ -29,12 +29,10 @@ class QuickSort(object):
             while QuickSort.numbers[j] > pivot:
                 j -= 1
 
-
             if i <= j:
                 QuickSort().__exchange__(i, j)
                 i += 1
                 j -= 1
-
 
         if low < j:
             QuickSort().__quicksort__(low, j)
