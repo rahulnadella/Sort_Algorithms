@@ -9,5 +9,6 @@ class SelectionSort(object):
 
         SelectionSort.__swap(values, least, i)
 
+    @staticmethod
     def __swap(A, x, y):
         A[x], A[y] = A[y], A[x]
