@@ -4,7 +4,7 @@ import quicksort
 class QuickSortTest(unittest.TestCase):
 
     def setUp(self):
-        self.quicksort = quicksort.QuickSort()
+        self.quicksort = quicksort.QuickSort
 
     def tearDown(self):
         self.quicksort = None
