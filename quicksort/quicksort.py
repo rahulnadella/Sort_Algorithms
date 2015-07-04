@@ -12,9 +12,7 @@ class QuickSort(object):
         QuickSort().__quicksort__(0, QuickSort.number - 1)
 
     def __exchange__(self, i, j):
-        temp = QuickSort.numbers[i]
-        QuickSort.numbers[i] = QuickSort.numbers[j]
-        QuickSort.numbers[j] = temp
+        QuickSort.numbers[i], QuickSort.numbers[j] = QuickSort.numbers[j], QuickSort.numbers[i]
 
     def __quicksort__(self, low, high):
         i = int(low)
