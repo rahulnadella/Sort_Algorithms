@@ -9,12 +9,12 @@ class QuickSort(object):
 
         QuickSort.numbers = values
         QuickSort.number = len(values)
-        QuickSort.__quicksort__(0, QuickSort.number - 1)
+        QuickSort.__quicksort(0, QuickSort.number - 1)
 
-    def __exchange__(i, j):
+    def __exchange(i, j):
         QuickSort.numbers[i], QuickSort.numbers[j] = QuickSort.numbers[j], QuickSort.numbers[i]
 
-    def __quicksort__(low, high):
+    def __quicksort(low, high):
         i = int(low)
         j = int(high)
         pivot = QuickSort.numbers[low + int((high - low)/2)]
@@ -28,12 +28,12 @@ class QuickSort(object):
                 j -= 1
 
             if i <= j:
-                QuickSort.__exchange__(i, j)
+                QuickSort.__exchange(i, j)
                 i += 1
                 j -= 1
 
         if low < j:
-            QuickSort.__quicksort__(low, j)
+            QuickSort.__quicksort(low, j)
 
         if i < high:
-            QuickSort.__quicksort__(i, high)
+            QuickSort.__quicksort(i, high)
