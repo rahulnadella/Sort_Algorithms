@@ -11,9 +11,11 @@ class QuickSort(object):
         QuickSort.number = len(values)
         QuickSort.__quicksort(0, QuickSort.number - 1)
 
+    @staticmethod
     def __exchange(i, j):
         QuickSort.numbers[i], QuickSort.numbers[j] = QuickSort.numbers[j], QuickSort.numbers[i]
 
+    @staticmethod
     def __quicksort(low, high):
         i = int(low)
         j = int(high)
