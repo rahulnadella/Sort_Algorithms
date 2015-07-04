@@ -7,7 +7,7 @@ class SelectionSort(object):
           if values[k] < values[least]:
             least = k
 
-        SelectionSort.swap(values, least, i)
+        SelectionSort.__swap(values, least, i)
 
-    def swap( A, x, y ):
+    def __swap(A, x, y):
         A[x], A[y] = A[y], A[x]
