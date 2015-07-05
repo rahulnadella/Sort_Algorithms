@@ -20,27 +20,48 @@ Space Complexity: O(1)
 
 class HeapSort(object):
 
-  def sort(a):
+  """
+  Implementation:
 
+  Heap sort happens in two phases. In the first phase, the array
+  is transformed into a heap. A heap is a binary tree where
+  1) each node is greater than each of its children
+  2) the tree is perfectly balanced
+  3) all leaves are in the leftmost position available.
+  In phase two the heap is continuously reduced to a sorted array:
+  1) while the heap is not empty
+  - remove the top of the head into an array
+  - fix the heap.
+  """
+  def sort(a):
     HeapSort.__heapify(a, len(a))
     end = len(a) - 1
+
     while end > 0:
       a[end], a[0] = a[0], a[end]
       end -= 1
       HeapSort.__sift_down(a, 0, end)
 
+  """
+  Private method
+  """
   @staticmethod
   def __heapify(a, count):
-
     start = int((count - 2) / 2)
+
     while start >= 0:
       HeapSort.__sift_down(a, start, count - 1)
       start -= 1
 
+  """
+  Private method
+
+  The __sift_down method checks and verifies that the structure is a heap
+  """
   @staticmethod
   def __sift_down(a, start, end):
-
     root = start
+
     while (root * 2 + 1) <= end:
       child = root * 2 + 1
       swap = root
