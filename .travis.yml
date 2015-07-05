@@ -16,7 +16,7 @@ script:
   - python3 heapsort/heapsort_test.py
   - python3 insertionsort/insertionsort_test.py
   - python3 mergesort/mergesort_test.py
-  - python3 quicksort/quicsort_test.py
+  - python3 quicksort/quicksort_test.py
   - python3 radixsort/radixsort_test.py
   - python3 selectionsort/selectionsort_test.py
 branches:
