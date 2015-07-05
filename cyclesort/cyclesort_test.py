@@ -16,5 +16,13 @@ class CycleSortTest(unittest.TestCase):
         self.cyclesort.sort(test_data)
         self.assertEqual(test_data, sorted_lst)
 
+    def test_cyclesort(self):
+        test_data = [8, 5, 3, 1, 9, 6, 0, 7, 4, 2, 5]
+
+        self.cyclesort.sort(test_data)
+        for i in range(1, len(test_data)):
+            if test_data[i - 1] > test_data[i]:
+              self.fail( "cyclesort sort method fails." )
+
 if __name__ == '__main__':
     unittest.main()

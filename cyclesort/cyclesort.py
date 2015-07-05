@@ -26,6 +26,10 @@ Space Complexity: O(n)
 
 class CycleSort(object):
 
+  """
+  Given a disordered list of integers (or any other items),
+  rearrange the integers in natural order.
+  """
   def sort(lst):
     writes = 0
 
