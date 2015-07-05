@@ -19,6 +19,20 @@ Space Complexity: O(n + k)
 
 class CountingSort(object):
 
+  """
+  Implementation notes:
+
+  1] Since the values range from 0 to k, create k+1 buckets.
+  2] To fill the buckets, iterate through the input list and
+  each time a value appears, increment the counter in its
+  bucket.
+  3] Now fill the input list with the compressed data in the
+  buckets. Each bucket's key represents a value in the
+  array. So for each bucket, from smallest key to largest,
+  add the index of the bucket to the input array and
+  decrease the counter in said bucket by one; until the
+  counter is zero.
+  """
   def sort(array):
     maximum = max(array)
     minimum = min(array)
