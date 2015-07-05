@@ -16,12 +16,12 @@ class InsertionSortTest(unittest.TestCase):
         self.insertionsort.sort(test_data)
         self.assertEqual(test_data, sorted_lst)
 
-    def testInsertionsort( self ):
-        A = [8, 5, 3, 1, 9, 6, 0, 7, 4, 2, 5]
-        self.insertionsort.sort( A )
-        for i in range( 1, len( A ) ):
-            if A[i - 1] > A[i]:
-                self.fail( "insertionsort method fails." )
+    def testInsertionsort(self):
+        test_data = [8, 5, 3, 1, 9, 6, 0, 7, 4, 2, 5]
+        self.insertionsort.sort(test_data)
+        for i in range(1, len(test_data)):
+            if test_data[i - 1] > test_data[i]:
+                self.fail("insertionsort method fails.")
 
 if __name__ == '__main__':
     unittest.main()
