@@ -17,6 +17,13 @@ Space Complexity: O(1)
 
 class SelectionSort(object):
 
+  """
+  Implementation:
+
+  Selection sort is a step up from insertion sort from a memory
+  viewpoint. It only swaps elements that need to be swapped. In terms
+  of time complexity, however, insertion sort is better.
+  """
   def sort(values):
     for i in range(len(values)):
       least = i
