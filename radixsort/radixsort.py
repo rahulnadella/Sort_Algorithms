@@ -13,12 +13,27 @@ internally by the radix sort. A hybrid sorting approach, such as using insertion
 sort for small bins improves performance of radix sort significantly.
 
 Worst Case: O(wn)
-Worst Space Complexity: O(w + k) 
+Worst Space Complexity: O(w + k)
 """
 
 
 class RadixSort(object):
 
+  """
+  Implementation:
+
+  radix sort, like counting sort and bucket sort, is an integer based
+  algorithm (i.e. the values of the input array are assumed to be
+  integers). Hence radix sort is among the fastest sorting algorithms
+  around, in theory. The particular distinction for radix sort is
+  that it creates a bucket for each cipher (i.e. digit); as such,
+  similar to bucket sort, each bucket in radix sort must be a
+  growable list that may admit different keys.
+
+  For decimal values, the number of buckets is 10, as the decimal
+  system has 10 numerals/cyphers (i.e. 0,1,2,3,4,5,6,7,8,9). Then
+  the keys are continuously sorted by significant digits.
+  """
   def sort(lst):
     RADIX = 10
     max_length = False

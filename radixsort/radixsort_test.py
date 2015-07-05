@@ -16,5 +16,12 @@ class RadixSortTest(unittest.TestCase):
         self.radixsort.sort(test_data)
         self.assertEqual(test_data, sorted_data)
 
+    def test_radixsort(self):
+        test_data = [18, 5, 100, 3, 1, 19, 6, 0, 7, 4, 2]
+        self.radixsort.sort(test_data)
+        for i in range(1, len(test_data)):
+            if test_data[i - 1] > test_data[i]:
+                self.fail("radix algorithm sort method fails.")
+
 if __name__ == '__main__':
     unittest.main()
