@@ -22,6 +22,13 @@ Space Complexity: O(1)
 
 class BubbleSort(object):
 
+  """
+  The sort_descending function with sort a list in descending order
+
+  1. For each element at index i from 0 to n, loop:
+  2. For each element at index k, from n to i exclusive, loop:
+  3. If the element at k is less than that at k - 1, swap them.
+  """
   def sort_descending(values):
     sorted = True
 
@@ -33,6 +40,13 @@ class BubbleSort(object):
               element + 1] = values[element + 1], values[element]
           sorted = True
 
+  """
+  The sort_ascending function with sort a list in ascending order
+
+  1. For each element at index i from 0 to n, loop:
+  2. For each element at index k, from n to i exclusive, loop:
+  3. If the element at k is greater than that at k + 1, swap them.
+  """
   def sort_ascending(values):
     sorted = True
 
