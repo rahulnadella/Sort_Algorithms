@@ -13,3 +13,8 @@ This project contains several implementations of common sort algorithms in Pytho
 | QuickSort | n log n | n log n | n^2 | log n  | Typically | Partitioning  |
 | RadixSort | - |  n * k/d | n * k/d | 2^d | No | N/A |
 | SelectionSort | n^2 |  n^2 | n^2 | 1 | No | Selection |
+
+License
+--------
+
+*BSD License* --> A short, permissive software license. Basically, you can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source.  There are many variations of this license in use.
