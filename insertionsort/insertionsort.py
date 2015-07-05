@@ -16,6 +16,14 @@ Space Complexity: O(1)
 
 class InsertionSort(object):
 
+  """
+  Implementation:
+
+  Insertion sort is good for collections that are very small
+  or nearly sorted. Otherwise it's not a good sorting algorithm:
+  it moves data around too much. Each time an insertion is made,
+  all elements in a greater position are shifted.
+  """
   def sort(lst):
 
     for i in range(1, len(lst)):
